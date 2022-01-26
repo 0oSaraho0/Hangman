@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Covered+By+Your+Grace&family=Finger+Paint&family=Gloria+Hallelujah&family=Permanent+Marker&family=Schoolbell&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    font-family: 'Finger Paint', sans-serif;
+    font-weight: 300;
+    
+}
