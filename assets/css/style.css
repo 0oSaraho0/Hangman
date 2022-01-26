@@ -9,5 +9,9 @@
 body {
     font-family: 'Finger Paint', sans-serif;
     font-weight: 300;
-    
+
+}
+
+#my-canvas {
+    background-color:#406343;
 }
