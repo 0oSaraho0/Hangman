@@ -9,9 +9,62 @@
 body {
     font-family: 'Finger Paint', sans-serif;
     font-weight: 300;
+    color: #FAEDF0;
 
 }
 
-#my-canvas {
-    background-color:#406343;
+#heading {
+    margin-left: 5%;
+    float: left;
+    font-size: 250%;
+    padding: 15px;
+    
+}
+
+.game-area {
+    background-color: green;
+    
+    padding:20px;
+    margin:20px;
+    border:10px groove brown;
+}
+
+#hangman {
+    margin-top: 67px;
+}
+
+#hangman span {
+    border:solid 8px #FAEDF0;
+}
+
+#hangman div{
+     background: #FAEDF0;
+     
+    
+
+}
+    
+#hangman .side-bar{
+    width:8px;
+    height:46vh;
+    margin-left: 10px;
+    
+}
+
+#hangman .top-bar {
+    width:131px;
+    height:8px;
+    margin-left:10px;
+    
+}
+
+#hangman .head {
+    width: 37px;
+    height: 42px;
+    border-radius: 100%;
+    background: none;
+    border:solid 8px black;
+    float:left;
+    margin-top: -272px;
+    margin-left: 110px;
 }
