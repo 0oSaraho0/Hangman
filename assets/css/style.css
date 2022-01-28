@@ -34,7 +34,8 @@ body {
 }
 
 #hangman span {
-    border:solid 8px #FAEDF0;
+    border:solid 4px #FAEDF0;
+    background-color: #FAEDF0;
 }
 
 #hangman div{
@@ -46,7 +47,7 @@ body {
     
 #hangman .side-bar{
     width:8px;
-    height:46vh;
+    height:51vh;
     margin-left: 10px;
     
 }
@@ -58,13 +59,76 @@ body {
     
 }
 
+#hangman .noose {
+    float: left;
+    height: 55px;
+    margin-left: 133px;
+    margin-top: -370px;
+   
+}
+
+
 #hangman .head {
     width: 37px;
-    height: 42px;
+    height: 45px;
     border-radius: 100%;
     background: none;
-    border:solid 8px black;
+    border:solid 8px #FAEDF0;
     float:left;
-    margin-top: -272px;
+    margin-top: -308px;
     margin-left: 110px;
 }
+
+#hangman .body {
+    height: 84px;
+    float: left;
+    margin-top: -248px;
+    margin-left: 132px;
+}
+
+#hangman .right-arm {
+    margin-left: 111px;
+    float: left;
+    height: 50px;
+    margin-top: -256px;
+    transform: rotate(
+134deg
+);
+}
+
+#hangman .left-arm {
+    margin-left: 155px;
+    float: left;
+    height: 50px;
+    margin-top: -256px;
+    transform: rotate( 
+45deg
+ );
+}
+
+#hangman .right-leg {
+    margin-left: 109px;
+    float: left;
+    height: 74px;
+    margin-top: -169px;
+    transform: rotate(
+        36deg
+        );
+}
+
+#hangman .left-leg {
+    margin-left: 155px;
+    float: left;
+    height: 74px;
+    margin-top: -169px;
+    transform: rotate(
+144deg
+)
+}#hangman .bottom-bar {
+    float:left;
+    width: 207px;
+}
+
+
+
+
