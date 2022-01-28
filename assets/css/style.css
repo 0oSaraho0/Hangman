@@ -27,6 +27,7 @@ body {
     padding:20px;
     margin:20px;
     border:10px groove brown;
+    height: 120vh;
 }
 
 #hangman {
@@ -130,5 +131,12 @@ body {
 }
 
 
+#word {
+    float: left;
+    margin-top: 20px;
+    font-size: 30px;
+}
 
-
+.letter {
+    border-bottom: solid #FAEDF0;
+}
