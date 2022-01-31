@@ -11,14 +11,13 @@
     <header>
         <h1 id="heading">Old Skool Hangman!</h1>
     </header>
- 
+    <div class="subject-choice-screen">
+        <button class="subject" data-type="geography">Geography(Countries)</button>
+        <button class="subject" data-type="maths">Maths</button>
+        <button class="subject" data-type="pe">P.E </button>
+    </div>
     <!--inspiration......https://github.com/ironhack-labs/lab-javascript-hangman-->
-    <section class="game-area">
-        <div class="subject-choice">
-            <h2 class="subject" data-type="geography">Geography(countries)</h2>
-            <h2 class="subject" data-type="maths">Maths</h2>
-            <h2 class="subject" data-type="pe">P.E </h2>
-        </div>
+    <section class="game-area">  
 <div id="hangman">
     <div class ="top-bar"></div>
     <div class ="side-bar"></div>
@@ -44,7 +43,12 @@
     <span class="letter 9">I</span>
     <span class="letter 10">J</span>
 
+    <div class="wrong-letters-box"></div>
 </div>
+
+<div class="winner-screen">Congratulations! You Won!  You saved the hangman!</div>
+
+<div class="looser-screen">Oh no. Bad Luck you didn't save the hangman.  Better luck next time</div>
 
 </section>
 

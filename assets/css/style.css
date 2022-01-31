@@ -10,6 +10,7 @@ body {
     font-family: 'Finger Paint', sans-serif;
     font-weight: 300;
     color: #FAEDF0;
+    
 
 }
 
@@ -21,7 +22,27 @@ body {
     
 }
 
+.subject-choice-screen {
+    flex-direction: column;
+    background-color: green;
+    border: 10px groove brown;
+    display: none;
+    z-index: 1;
+    height:50vh;
+    width:50vw;
+    margin:20%;
+}
+
+button {
+    display: flex;
+    background-color: green;
+    border: 10px groove brown;
+    font-family: inherit;
+    color: inherit;
+}
+
 .game-area {
+    flex-direction: column;
     background-color: green;
     
     padding:20px;
@@ -139,4 +160,26 @@ body {
 
 .letter {
     border-bottom: solid #FAEDF0;
+}
+
+.winner-screen {
+    flex-direction: column;
+    background-color: green;
+    border: 10px groove brown;
+    display: none;
+    z-index: 1;
+    height:50vh;
+    width:50vw;
+    margin:20%;
+}
+
+.looser-screen {
+    flex-direction: column;
+    background-color: green;
+    border: 10px groove brown;
+    display: none;
+    z-index: 1;
+    height:50vh;
+    width:50vw;
+    margin:20%;
 }
