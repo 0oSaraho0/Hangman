@@ -20,10 +20,9 @@ function screens () {
 
 
 document.addEventListener("DOMContentLoaded",function() {
-    let subjects = document.getElementsByClassName('subject-choice-screen');
-
-    
+    let subjects = document.getElementsByClassName('subject-choice-screen');    
     for (let subject of subjects) {
+        subjects.style.display = "block";
         subject.addEventListener('click',function() {
             let gameType = this.getAttribute('data-type');
             subjectType(gameType);
@@ -37,6 +36,7 @@ function subjectType (theArray) {
     //https://css-tricks.com/snippets/javascript/select-random-item-array/
 
     let randomWord = theArray[Math.floor(Math.random()*theArray.length)];
+    return theArray[randomWord];
 // let randomGeography = geographyArray[Math.floor(Math.random()*geographyArray.length)];
 // let randomMaths = mathsArray[Math.floor(Math.random()*mathsArray.length)];
 // let randomPE = pEArray[Math.floor(Math.random()*pEArray.length)]; 

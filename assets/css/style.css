@@ -24,7 +24,7 @@ body {
 
 .subject-choice-screen {
     flex-direction: column;
-    background-color: green;
+    background-color: #406343;
     border: 10px groove brown;
     display: none;
     z-index: 1;
@@ -35,7 +35,7 @@ body {
 
 button {
     display: flex;
-    background-color: green;
+    background-color: #406343;
     border: 10px groove brown;
     font-family: inherit;
     color: inherit;
@@ -43,7 +43,7 @@ button {
 
 .game-area {
     flex-direction: column;
-    background-color: green;
+    background-color: #406343;
     
     padding:20px;
     margin:20px;
@@ -164,22 +164,22 @@ button {
 
 .winner-screen {
     flex-direction: column;
-    background-color: green;
+    background-color: #406343;
     border: 10px groove brown;
     display: none;
     z-index: 1;
     height:50vh;
     width:50vw;
-    margin:20%;
+    margin: -46vh 12%;
 }
 
 .looser-screen {
     flex-direction: column;
-    background-color: green;
+    background-color: #406343;
     border: 10px groove brown;
     display: none;
     z-index: 1;
     height:50vh;
     width:50vw;
-    margin:20%;
+    margin: -46vh 12%;
 }
