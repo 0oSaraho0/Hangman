@@ -1,0 +1,16 @@
+- rules
+  - write rules
+  - hide rules
+    - close button
+  - show rules
+    - button
+- choose subject
+    - subject options appear
+    - choose subject
+    - subject options dissapear
+- think of a word
+- write out the spaces
+- guess letters
+- letter correct/wrong
+- show response
+- continue game

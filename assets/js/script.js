@@ -1,4 +1,4 @@
-
+/*
 
 //https://www.worldometers.info/geography/alphabetical-list-of-countries/ infor for countries
 let geographyArray = ['Argentina','Bahamas','Cambodia','Denmark', 'Ethiopia','England','Finland','Guatemala','Haiti','Ireland','Indonesia','Japan','Kazakhstan','Lebanon','Madagascar','Mauritius','Mozambique','Norway','Oman','Paraguay','Portugal','Romania','Senegal','Seychelles','Spain','Scotland','Thailand','Togo','Turkey','Uruguay','Vietnam','Wales','Yemen','Zimbabwe'];
@@ -70,4 +70,17 @@ function playMaths () {
 
 function playPE () {
 }
+
+*/
+//https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
+
+
+let button = document.getElementById('button-rules');
+let rules = document.getElementsByClassName('rules')[0];
+
+function toggleHide () {
+    rules.classList.toggle('hide');
+}
+
+button.addEventListener('click', toggleHide);
 

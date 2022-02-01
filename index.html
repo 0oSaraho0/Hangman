@@ -11,14 +11,20 @@
     <header>
         <h1 id="heading">Old Skool Hangman!</h1>
     </header>
-    <div class="subject-choice-screen">
+    <div class="subject-choice-screen hide">
         <button class="subject" data-type="geography">Geography(Countries)</button>
         <button class="subject" data-type="maths">Maths</button>
         <button class="subject" data-type="pe">P.E </button>
+    </div>   
+    <div class="hide rules">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea iusto reiciendis debitis facilis totam dignissimos pariatur doloribus? Esse praesentium molestiae repudiandae vero expedita, minus sequi recusandae, aspernatur ducimus nesciunt et?
+        Nobis, asperiores nulla quis cum corporis expedita aut accusamus fugiat labore inventore debitis exercitationem odio ea praesentium voluptatem ad modi numquam. Deleniti veniam deserunt dolorem quam id, ipsa laboriosam adipisci!
+        Iure iusto molestiae tempora qui excepturi maiores laborum doloribus est totam perferendis consequatur, deserunt reiciendis error accusantium animi eveniet? Temporibus veritatis nemo a et officia ea ducimus totam eos distinctio!</p>
     </div>
+    <button id="button-rules">Rules</button>
     <!--inspiration......https://github.com/ironhack-labs/lab-javascript-hangman-->
     <section class="game-area">  
-<div id="hangman">
+<div id="hangman" class="hide">
     <div class ="top-bar"></div>
     <div class ="side-bar"></div>
     <span class ="noose"></span>
@@ -46,9 +52,9 @@
     <div class="wrong-letters-box"></div>
 </div>
 
-<div class="winner-screen">Congratulations! You Won!  You saved the hangman!</div>
+<div class="winner-screen hide">Congratulations! You Won!  You saved the hangman!</div>
 
-<div class="looser-screen">Oh no. Bad Luck you didn't save the hangman.  Better luck next time</div>
+<div class="looser-screen hide">Oh no. Bad Luck you didn't save the hangman.  Better luck next time</div>
 
 </section>
 

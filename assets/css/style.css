@@ -23,10 +23,9 @@ body {
 }
 
 .subject-choice-screen {
-    flex-direction: column;
+    float: left;
     background-color: #406343;
     border: 10px groove brown;
-    display: none;
     z-index: 1;
     height:50vh;
     width:50vw;
@@ -166,7 +165,6 @@ button {
     flex-direction: column;
     background-color: #406343;
     border: 10px groove brown;
-    display: none;
     z-index: 1;
     height:50vh;
     width:50vw;
@@ -182,4 +180,8 @@ button {
     height:50vh;
     width:50vw;
     margin: -46vh 12%;
+}
+
+.hide {
+    display: none;
 }
