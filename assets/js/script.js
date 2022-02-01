@@ -96,10 +96,20 @@ document.addEventListener("DOMContentLoaded",function() {
     });
 
 function displayWord(theArray) {
-    console.log("stuff");
+    
     let randomWord = theArray[Math.floor(Math.random()*theArray.length)];
-    console.log(randomWord);
-    //return theArray[randomWord];
+    
+
+    document.getElementById('word').innerHTML = "";
+    
+    for (let i = 0; i < randomWord.length; i++){
+        let newLetter = document.createElement('span');
+        newLetter.textContent = randomWord[i];
+        document.getElementById('word').appendChild(newLetter);
+
+    }
+   // let guessWord = document.getElementById('word');
+   // guessWord.innerText = randomWord;
 }
 
 function clickButton(e) {
