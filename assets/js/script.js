@@ -1,4 +1,4 @@
-/*
+
 
 //https://www.worldometers.info/geography/alphabetical-list-of-countries/ infor for countries
 let geographyArray = ['Argentina','Bahamas','Cambodia','Denmark', 'Ethiopia','England','Finland','Guatemala','Haiti','Ireland','Indonesia','Japan','Kazakhstan','Lebanon','Madagascar','Mauritius','Mozambique','Norway','Oman','Paraguay','Portugal','Romania','Senegal','Seychelles','Spain','Scotland','Thailand','Togo','Turkey','Uruguay','Vietnam','Wales','Yemen','Zimbabwe'];
@@ -6,7 +6,7 @@ let geographyArray = ['Argentina','Bahamas','Cambodia','Denmark', 'Ethiopia','En
 let mathsArray = ['Abacus','Algorithm','Array','Calculus','Cone','Decagon','Decimal','Diameter','Divide','Exponent','Formula','Fraction','Graph','Hexagon','Integer','Kilometer','Median','Multiply','Numerator','Octagon','Quadrant','Quotient','Radius','Ratio','Rectangle','Rhombus','Subtract','Tangent','Triangle','Variable','Volume','Unit'];
 //https://www.yourschoolgames.com/taking-part/our-sports/  https://www.afpe.org.uk/physical-education/glossary-of-terms/
 let pEArray = ['Agility','Balance','Cricket','Fitness','Flexibility','Dance','Rounders','Stallball','Shotput','Gymnastics','Archery','Football','Rugby','Hockey','Swimming','Javelin','Running','Aerobics','Muscles','Weights','Treadmill','Lacrosse','Netball','Basketball','Athletics','Tennis','Badminton','Judo','Squash','Vollyball'];
-
+/*
 let secretWord = "";
 let tries = 7;
 let letter = [];
@@ -73,8 +73,13 @@ function playPE () {
 
 */
 //https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
+/*
+function subjectType (theArray) {
 
-
+    let randomWord = theArray[Math.floor(Math.random()*theArray.length)];
+    return theArray[randomWord];
+}
+*/
 let button = document.getElementById('button-rules');
 let rules = document.getElementsByClassName('rules')[0];
 
@@ -89,3 +94,43 @@ document.addEventListener("DOMContentLoaded",function() {
         choice.style.display = 'block';
     console.log(choice);
     });
+
+function displayWord(theArray) {
+    console.log("stuff");
+    let randomWord = theArray[Math.floor(Math.random()*theArray.length)];
+    console.log(randomWord);
+    //return theArray[randomWord];
+}
+
+function clickButton(e) {
+    let category = (e.target.dataset.type);
+    if (category === "maths") {
+        displayWord(mathsArray);
+        console.log("woohoo im great");
+    }else if (category === "pe"){
+        displayWord(pEArray);
+       console.log("pe is poo");
+    }else if ( category === "geography"){ 
+        displayWord(geographyArray);
+        console.log('rocks and shiz');
+    }
+}
+    //getting correct array
+
+
+function pickSubject () {    
+let picks = document.getElementsByClassName('subject');
+    console.log(picks);
+    for (let pick of picks){
+        pick.addEventListener('click', clickButton);
+    }
+        /*
+        if(this.getAttribute('data-type') === 'geography');
+        runArray(geographyArray);
+        
+    }
+*/
+}
+
+pickSubject();
+
