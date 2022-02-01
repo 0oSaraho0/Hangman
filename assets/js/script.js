@@ -84,3 +84,8 @@ function toggleHide () {
 
 button.addEventListener('click', toggleHide);
 
+document.addEventListener("DOMContentLoaded",function() {
+    let choice = document.getElementsByClassName('subject-choice-screen')[0];
+        choice.style.display = 'block';
+    console.log(choice);
+    });
