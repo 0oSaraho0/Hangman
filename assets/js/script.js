@@ -82,6 +82,7 @@ function subjectType (theArray) {
 */
 let button = document.getElementById('button-rules');
 let rules = document.getElementsByClassName('rules')[0];
+let choice = document.getElementsByClassName('subject-choice-screen')[0];
 
 function toggleHide () {
     rules.classList.toggle('hide');
@@ -90,7 +91,7 @@ function toggleHide () {
 button.addEventListener('click', toggleHide);
 
 document.addEventListener("DOMContentLoaded",function() {
-    let choice = document.getElementsByClassName('subject-choice-screen')[0];
+    
         choice.style.display = 'block';
     console.log(choice);
     });
@@ -113,9 +114,11 @@ function displayWord(theArray) {
 }
 
 function clickButton(e) {
+    
     let category = (e.target.dataset.type);
     if (category === "maths") {
         displayWord(mathsArray);
+        
         console.log("woohoo im great");
     }else if (category === "pe"){
         displayWord(pEArray);

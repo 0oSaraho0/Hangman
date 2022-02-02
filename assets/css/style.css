@@ -39,6 +39,9 @@ button {
     font-family: inherit;
     color: inherit;
 }
+.button-rules {
+    
+}
 
 .game-area {
     flex-direction: column;
