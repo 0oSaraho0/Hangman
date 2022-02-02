@@ -82,18 +82,20 @@ function subjectType (theArray) {
 */
 let button = document.getElementById('button-rules');
 let rules = document.getElementsByClassName('rules')[0];
-let choice = document.getElementsByClassName('subject-choice-screen')[0];
+let choiceButtonsContainer = document.getElementsByClassName('subject-choice-screen')[0];
 
 function toggleHide () {
     rules.classList.toggle('hide');
+}
+function toggleHideTest (hiddenElement) {
+    hiddenElement.classList.toggle('hide');
 }
 
 button.addEventListener('click', toggleHide);
 
 document.addEventListener("DOMContentLoaded",function() {
     
-        choice.style.display = 'block';
-    console.log(choice);
+        toggleHideTest(choiceButtonsContainer);
     });
 
 function displayWord(theArray) {
@@ -105,6 +107,7 @@ function displayWord(theArray) {
     
     for (let i = 0; i < randomWord.length; i++){
         let newLetter = document.createElement('span');
+        newLetter.setAttribute('class', 'hidden-word');
         newLetter.textContent = randomWord[i];
         document.getElementById('word').appendChild(newLetter);
 
@@ -116,13 +119,13 @@ function displayWord(theArray) {
 function clickButton(e) {
     
     let category = (e.target.dataset.type);
+    toggleHideTest(choiceButtonsContainer);
     if (category === "maths") {
         displayWord(mathsArray);
-        
         console.log("woohoo im great");
     }else if (category === "pe"){
         displayWord(pEArray);
-       console.log("pe is poo");
+        console.log("pe is poo");
     }else if ( category === "geography"){ 
         displayWord(geographyArray);
         console.log('rocks and shiz');

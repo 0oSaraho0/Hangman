@@ -22,6 +22,11 @@ body {
     
 }
 
+.hidden-word {
+    border-bottom: solid 2px #FAEDF0;
+    color: #406343;
+    margin-left: 30px;
+}
 .subject-choice-screen {
     float: left;
     background-color: #406343;
@@ -39,9 +44,7 @@ button {
     font-family: inherit;
     color: inherit;
 }
-.button-rules {
-    
-}
+
 
 .game-area {
     flex-direction: column;
