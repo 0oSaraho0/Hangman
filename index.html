@@ -16,22 +16,23 @@
         <button class="subject" data-type="maths">Maths</button>
         <button class="subject" data-type="pe">P.E </button>
     </div>   
-    <div class="hide rules">
-        <h2>Rules</h2>
-        <ul>
-            <li>Pick a Subject for yor hidden word </li>
-            <li>Pick a letter to see if it is in the hidden word</li>
-            <li>If it is the letter will appear in the word</li>
-            <li>If not you will loose one live and one line of the hangman will appear</li>
-            <li>You have 10 tries to save the hangman</li>
-            <li>if you guess the word before the hangman gets hung you will be a winner</li>
-
-        </ul>
-    </div>
-    <button id="button-rules">Rules</button>
+    
     <!--inspiration......https://github.com/ironhack-labs/lab-javascript-hangman-->
-    <section class="game-area">  
-<div id="hangman" class="hide">
+    <section class="game-area">
+        <div class="hide rules">
+            <h2>Rules</h2>
+            <ul>
+                <li>Pick a Subject for yor hidden word </li>
+                <li>Pick a letter to see if it is in the hidden word</li>
+                <li>If it is the letter will appear in the word</li>
+                <li>If not you will loose one live and one line of the hangman will appear</li>
+                <li>You have 10 tries to save the hangman</li>
+                <li>if you guess the word before the hangman gets hung you will be a winner</li>
+    
+            </ul>
+        </div>
+        <button id="button-rules">Rules</button>
+<div id="hangman">
     <div class ="top-bar"></div>
     <div class ="side-bar"></div>
     <span class ="noose"></span>
@@ -42,12 +43,19 @@
     <span class ="right-leg"></span>
     <span class ="left-leg"></span>
     <span class ="bottom-bar"></span>
-  
 </div>
+
 <div id="word">
-    FGHGFB
+    Hangman!
 
     <!-- <div class="wrong-letters-box"></div> -->
+</div>
+<div>
+<p class="guess">Enter Letter:</p>
+<input id="letter-guess" type="text" maxlength="1">
+</div>
+<button class="submit-buton">Submit Answer</button>
+</div>
 </div>
 
 <div class="winner-screen hide">Congratulations! You Won!  You saved the hangman!</div>

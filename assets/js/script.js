@@ -130,6 +130,8 @@ function clickButton(e) {
         displayWord(geographyArray);
         console.log('rocks and shiz');
     }
+
+
 }
     //getting correct array
 
@@ -150,3 +152,28 @@ let picks = document.getElementsByClassName('subject');
 
 pickSubject();
 
+function submit () {
+    let submitLetter = document.getElementsByClassName('submit-buton')[0];
+console.log(submitLetter);
+    submitLetter.addEventListener('click', checkLetter);
+}
+
+submit();
+
+function checkLetter () {
+    let guessedLetter = document.getElementById('letter-guess');
+    console.log(guessedLetter);
+
+    let lettersInputIntoBox = /^[a-zA-Z]/;
+   // console.log(lettersInputIntoBox)
+        if (guessedLetter.value.match(lettersInputIntoBox)) {
+            return true;
+        }else {
+            alert ('Please enter letters only.');
+            return false;
+        }
+        if (guessedLetter.value.match(randomWord[i](displayWord)));
+            return true;
+        console.log(true);
+        }
+checkLetter();

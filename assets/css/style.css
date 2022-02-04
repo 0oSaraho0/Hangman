@@ -27,6 +27,17 @@ body {
     color: #406343;
     margin-left: 30px;
 }
+
+.rules {
+    background-color: #406343;
+    border: 10px groove brown;
+    margin-top: 50px;
+}
+
+.rules ul {
+    padding-left: 30px;
+}
+
 .subject-choice-screen {
     float: left;
     background-color: #406343;
@@ -35,14 +46,16 @@ body {
     height:50vh;
     width:50vw;
     margin:20%;
+    text-align: center;
 }
 
-button {
-    display: flex;
+
+
+.subject {
     background-color: #406343;
-    border: 10px groove brown;
     font-family: inherit;
     color: inherit;
+    display: block;
 }
 
 
@@ -58,6 +71,7 @@ button {
 
 #hangman {
     margin-top: 67px;
+    display: none;
 }
 
 #hangman span {
