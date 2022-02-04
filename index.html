@@ -7,18 +7,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
-<body>
-    <header>
-        <h1 id="heading">Old Skool Hangman!</h1>
-    </header>
-    <div class="subject-choice-screen hide">
-        <button class="subject" data-type="geography">Geography(Countries)</button>
-        <button class="subject" data-type="maths">Maths</button>
-        <button class="subject" data-type="pe">P.E </button>
-    </div>   
+<body> 
     
     <!--inspiration......https://github.com/ironhack-labs/lab-javascript-hangman-->
     <section class="game-area">
+        <header>
+            <h1 id="heading">Old Skool Hangman!</h1>
+        </header>
+        <button id="button-rules">Rules</button>
         <div class="hide rules">
             <h2>Rules</h2>
             <ul>
@@ -31,7 +27,11 @@
     
             </ul>
         </div>
-        <button id="button-rules">Rules</button>
+        <div class="subject-choice-screen hide">
+            <button class="subject" data-type="geography">Geography(Countries)</button>
+            <button class="subject" data-type="maths">Maths</button>
+            <button class="subject" data-type="pe">P.E </button>
+        </div>  
 <div id="hangman">
     <div class ="top-bar"></div>
     <div class ="side-bar"></div>
