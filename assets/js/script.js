@@ -98,72 +98,65 @@ document.addEventListener("DOMContentLoaded",function() {
         toggleHideTest(choiceButtonsContainer);
     });
 
-function displayWord(theArray) {
-    
-    let randomWord = theArray[Math.floor(Math.random()*theArray.length)];
-    
+// selects category from subject menu and closes subject screen
 
-    document.getElementById('word').innerHTML = "";
+    function clickButton(e) {
     
-    for (let i = 0; i < randomWord.length; i++){
+        let category = (e.target.dataset.type);
+        toggleHideTest(choiceButtonsContainer);
+        if (category === "maths") {
+            displayWord(mathsArray);
+            console.log("woohoo im great");
+        }else if (category === "pe"){
+            displayWord(pEArray);
+            console.log("pe is poo");
+        }else if ( category === "geography"){ 
+            displayWord(geographyArray);
+            console.log('rocks and shiz');
+        }
+    }
+    // adds event listner to click selected subject
+    function pickSubject () {    
+        let picks = document.getElementsByClassName('subject');
+            console.log(picks);
+            for (let pick of picks){
+                pick.addEventListener('click', clickButton);
+            }
+        }
+        pickSubject();
+
+// Add an event listener to submit letter when submit button is
+    function submit () {
+        let submitLetter = document.getElementsByClassName('submit-buton')[0];
+        console.log(submitLetter);
+        submitLetter.addEventListener('click', checkLetter);
+    }
+    submit();
+
+
+// picks random word from the subject array and inputs it into separate spans in the html as a hidden word.  
+
+function displayWord(theArray) {
+    let randomWord = theArray[Math.floor(Math.random()*theArray.length)];
+    document.getElementById('word').innerHTML = "";
+    runWord();
+    checkGuess();
+
+function runWord () {
+    let newWord = randomWord;
+    for (let i = 0; i < newWord.length; i++){
         let newLetter = document.createElement('span');
         newLetter.setAttribute('class', 'hidden-word');
-        newLetter.textContent = randomWord[i];
+        newLetter.textContent = newWord[i];
         document.getElementById('word').appendChild(newLetter);
-
     }
-   // let guessWord = document.getElementById('word');
-   // guessWord.innerText = randomWord;
+}
 }
 
-function clickButton(e) {
-    
-    let category = (e.target.dataset.type);
-    toggleHideTest(choiceButtonsContainer);
-    if (category === "maths") {
-        displayWord(mathsArray);
-        console.log("woohoo im great");
-    }else if (category === "pe"){
-        displayWord(pEArray);
-        console.log("pe is poo");
-    }else if ( category === "geography"){ 
-        displayWord(geographyArray);
-        console.log('rocks and shiz');
-    }
-
-
-}
-    //getting correct array
-
-
-function pickSubject () {    
-let picks = document.getElementsByClassName('subject');
-    console.log(picks);
-    for (let pick of picks){
-        pick.addEventListener('click', clickButton);
-    }
-        /*
-        if(this.getAttribute('data-type') === 'geography');
-        runArray(geographyArray);
-        
-    }
-*/
-}
-
-pickSubject();
-
-function submit () {
-    let submitLetter = document.getElementsByClassName('submit-buton')[0];
-console.log(submitLetter);
-    submitLetter.addEventListener('click', checkLetter);
-}
-
-submit();
-
+let guessedLetter = document.getElementById('letter-guess');
+console.log(guessedLetter);
 function checkLetter () {
-    let guessedLetter = document.getElementById('letter-guess');
-    console.log(guessedLetter);
-
+    
     let lettersInputIntoBox = /^[a-zA-Z]/;
    // console.log(lettersInputIntoBox)
         if (guessedLetter.value.match(lettersInputIntoBox)) {
@@ -172,8 +165,33 @@ function checkLetter () {
             alert ('Please enter letters only.');
             return false;
         }
-        if (guessedLetter.value.match(randomWord[i](displayWord)));
-            return true;
-        console.log(true);
+    }
+    checkLetter();
+
+function checkGuess() {
+    let wrongLetters = document.getElementsByClassName('wrong-letters-box');
+    let hiddenLetters = document.getElementsByClassName('hidden-word');
+    
+console.log(wrongLetters);
+console.log(hiddenLetters);
+
+
+//if (hiddenLetters.innerHTML.includes(guessedLetter)); {
+ //   console.log(guessedLetter);
+//}
+}
+
+/*
+    for (let j = 0; j < hiddenLetters.length; j++) {
+        if (hiddenLetters.innerHTML[j] === guessedLetter.innerHTML) {
+            console.log(guessedLetter);
         }
-checkLetter();
+    }*/
+
+
+
+    
+
+checkGuess();
+
+
