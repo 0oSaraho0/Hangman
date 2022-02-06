@@ -61,7 +61,7 @@ body {
     background-color: #406343;
     border: 10px groove brown;
     z-index: 1;
-    height:50vh;
+    height:36vh;
     width:74vw;
     justify-content: center;
 }
@@ -73,6 +73,28 @@ body {
     font-family: inherit;
     color: inherit;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 21px;
+    line-height: 3;
+}
+
+.subject:hover {
+    background-color: #FAEDF0;
+    font-family: inherit;
+    color: #406343;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 22px;
+    line-height: 3;
+    border-radius: 5px;
+}
+
+.subject-title {
+    text-align: center;
+    text-decoration: underline;
+    
 }
 
 
@@ -228,10 +250,35 @@ body {
     border-bottom: solid #FAEDF0;
 }
 
+#form {
+    margin-top: 80px;
+    display: inline-block;
+}
 .submit-button {
     font-family: inherit;
     background: inherit;
     color: inherit;
+    font-size: 19px;
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    font-family: inherit;
+    background: #FAEDF0;
+    color: #406343;
+    font-size: 20px;
+}
+
+#letter-guess {
+    font-family: inherit;
+    font-size: 21px;
+    width: 33px;
+    text-align: center;
+    
+}
+
+.guess {
+    font-size: 19px;
 }
 
 .winner-screen {
