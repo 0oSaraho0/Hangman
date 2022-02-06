@@ -35,34 +35,52 @@
 
 # About
 
-This website is aimed at home brewing enthusiasts.  The owner of the website wishes to share his home brew recipes and home brewing ideas and have a space for other home brewing enthusiasts to be able to make contact and subscribe to his news letter.
+This is an interactive game based on the original style of hangman. I have taken a school theme with  similar to subjects learnt in school.  It is designed as if it is been played on an old school chalk board.  The user picks a subject from the 3 choices at the begining of the game and picks letters to guess a hidden word related to that subject.  Hopefully saving the hangman and guessing the word correctly.  the user has 1o tries to win the game and save the stickman from being hung.
 
 
 # User Experience (UX)
 
-before starting the website I sat down with the owner and discussed what he wanted to see from his website.
+## Initial Concept
 
-Site owners goals
-- It needed to be easy to navigate
-- It needed a contact or chatroom style section so that he could meet other beer enthusiasts.
-- He wanted a section to show some of his recipes.
-- He would like a blogging section so that in the future he could add to it when he next brews.
+The idea for this game is to create an online version of the pen and paper game hangman.  I have decided to keep to the original theme of hanging the stick man.  Giving it the name 'Old Skool Hangman' I have played on the idea that this is the original 'old school' version.
 
-we rated these goals on a scale of 1 to 5 in importance and feasibility
+I have used javascript, CSS and HTML to create this game.
 
-| Goal | Importance | Feasibility |
-|---| ---|----|
-|Easy to navigate|5|5|
-|Chatroom|2|2|
+The game is targeted at adults who might rememeber playing hangman at school as a child and want to spend a few minutes of their day taking their mind of other things testing their knowlege guessing words related to subjects taught in school.
 
+The game could be easily addapted with different subject choices by changing the randome words to be guessed.
+
+## Site Goals
+
+- To provide a fun game that is to navigate and intuative to use.
+- To be interactive and fun to play.
+- To be fully responsive on all devices.
+- To provide a choice of subjects for the user to choose from.
+
+## User Goals
+
+The site will be based on the following user needs.
+
+- I want the site to be easy to use.
+- I want the game to be chalenging.
+- I want the each game to only take a few minutes so I can play over my morning coffee or during a lunch break.
+- I want the game to be similar to how i played as a child to gain a feeling of nostalga.
 
 # Wireframes
 
-
+This time i drew my wireframes out roughly on paper before I started.
 
 ---
 
 ## Colour Schemes
+
+I went for a simple colour scheme.  
+I wanted the game to look like it was being played on an old blackboard.
+I chose 
+[#406343](board-colour.png)
+because it is the colour of an old chalk board.
+for the text colour I chose
+[#FAEDF0](text-colour.png)
 
 
 

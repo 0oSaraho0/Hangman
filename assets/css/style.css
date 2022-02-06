@@ -24,10 +24,13 @@ body {
 
 .hidden-word {
     border-bottom: solid 2px #FAEDF0;
-    color: transparent;
-    margin-left: 30px;
+    margin-left: 30px;    
 }
 
+.hidden-letter {
+    color: transparent;
+
+}
 #button-rules:hover {
     background-color: #FAEDF0;
     color: #406343;

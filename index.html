@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
-<body> 
-    
+
+<body>
+
     <!--inspiration......https://github.com/ironhack-labs/lab-javascript-hangman-->
     <section class="game-area">
         <header>
@@ -24,48 +26,50 @@
                 <li>If not you will loose one live and one line of the hangman will appear</li>
                 <li>You have 10 tries to save the hangman</li>
                 <li>if you guess the word before the hangman gets hung you will be a winner</li>
-    
+
             </ul>
         </div>
         <div class="subject-choice-screen hide">
             <button class="subject" data-type="geography">Geography(Countries)</button>
             <button class="subject" data-type="maths">Maths</button>
             <button class="subject" data-type="pe">P.E </button>
-        </div>  
-<div id="hangman">
-    <div class ="top-bar"></div>
-    <div class ="side-bar"></div>
-    <span class ="noose"></span>
-    <span class ="head"></span>
-    <span class ="body"></span>
-    <span class ="right-arm"></span>
-    <span class ="left-arm"></span>
-    <span class ="right-leg"></span>
-    <span class ="left-leg"></span>
-    <span class ="bottom-bar"></span>
-</div>
+        </div>
+        <div id="hangman">
+            <div class="top-bar hide life-3"></div>
+            <div class="side-bar hide lifr-2"></div>
+            <span class="noose hide life-10" ></span>
+            <span class="head hide life-4"></span>
+            <span class="body hide life-5"></span>
+            <span class="right-arm hide life-6"></span>
+            <span class="left-arm hide life-7"></span>
+            <span class="right-leg hide life-8"></span>
+            <span class="left-leg hide life-9"></span>
+            <span class="bottom-bar hide life-1"></span>
+        </div>
 
-<div id="word">
-    Hangman!
+        <div id="word">
+            Hangman!
 
-<div class="wrong-letters-box"></div>
-</div>
-<div>
-<p class="guess">Enter Letter:</p>
-<input id="letter-guess" type="text" maxlength="1">
-</div>
-<button class="submit-buton">Submit Answer</button>
-</div>
-</div>
+            
+        </div>
+        
+        <div>
+            <form id="form">
+                <label class="guess">Enter Letter:</label>
+                <input name="letterInput" id="letter-guess" type="text" maxlength="1">
+                <input type="submit" class="submit-button" value="Submit Answer">
+            </form>
+        </div>
+        <div id="wrong-letters-box"></div>
+        <div class="winner-screen hide">Congratulations! You Won! You saved the hangman!</div>
 
-<div class="winner-screen hide">Congratulations! You Won!  You saved the hangman!</div>
+        <div class="looser-screen hide">Oh no. Bad Luck you didn't save the hangman. Better luck next time</div>
 
-<div class="looser-screen hide">Oh no. Bad Luck you didn't save the hangman.  Better luck next time</div>
-
-</section>
+    </section>
 
 
 
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

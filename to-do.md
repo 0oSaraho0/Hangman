@@ -14,3 +14,7 @@
 - letter correct/wrong
 - show response
 - continue game
+
+
+https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
+https://css-tricks.com/snippets/javascript/select-random-item-array/
