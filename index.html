@@ -17,6 +17,7 @@
             <h1 id="heading">Old Skool Hangman!</h1>
         </header>
         <button id="button-rules">Rules</button>
+        <button id="subject-choice-button">Subject Choice</button>
         <div class="hide rules">
             <h2>Rules</h2>
             <ul>
@@ -31,7 +32,7 @@
         </div>
         <div class="subject-choice-screen hide">
             <h2 class="subject-title">Pick a Subject</h2>
-            <button class="subject" data-type="geography">Geography(Countries)</button>
+            <button class="subject" data-type="geography">Geography</button>
             <button class="subject" data-type="maths">Maths</button>
             <button class="subject" data-type="pe">P.E </button>
         </div>
@@ -45,16 +46,13 @@
             <span class="left-arm life-7"></span>
             <span class="right-leg life-8"></span>
             <span class="left-leg life-9"></span>
-            <span class="bottom-bare life-2"></span>
+            <span class="bottom-bar life-2"></span>
         </div>
 
         <div id="word">
             Hangman!
-
-            
         </div>
-        
-        
+    
         <form id="form">
             <label class="guess">Enter Letter:</label>
             <input name="letterInput" id="letter-guess" type="text" maxlength="1" minlength="1">
@@ -67,9 +65,6 @@
         <div class="looser-screen hide">Oh no. Bad Luck you didn't save the hangman. Better luck next time</div>
 
     </section>
-
-
-
     <script src="assets/js/script.js"></script>
 </body>
 

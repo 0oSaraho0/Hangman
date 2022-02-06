@@ -108,6 +108,8 @@ for the text colour I chose
 
 # Existing bugs
  I noticed that it was possible to input a blank space on the game and it would give give a false value and loose a life.  I tried to fix it by putting a min length of 1 onthe input box but this didn't work.  i will need to look into this further.
+
+ The subject title on the subject screen makes the screen disapear but does not select a subject.  This needs to be sorted but for now i have put hovers over the subjects making them more attractive to click.
 # Fixed bugs
  
 

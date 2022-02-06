@@ -44,6 +44,23 @@ body {
     color: #FAEDF0;
     font-size: 20px;
 }
+
+#subject-choice-button {
+    background-color: #406343;
+    font-family: 'Finger Paint', sans-serif;
+    color: #FAEDF0;
+    font-size: 20px;
+    margin-left: 5px;
+
+}
+
+#subject-choice-button:hover {
+    background-color: #FAEDF0;
+    color: #406343;
+    font-size: 22px;
+    font-family: 'Finger Paint', sans-serif;
+}
+
 .rules {
     background-color: #406343;
     border: 10px groove brown;
@@ -325,5 +342,24 @@ body {
 
     #word {
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 317px)  {
+
+    #subject-choice-button{
+        font-size: 18px;
+    }
+
+    #subject-choice-button:hover{
+        font-size:19px;
+    }
+
+    #button-rules{
+        font-size: 18px;
+    }
+
+    #button-rules:hover{
+        font-size: 19px;
     }
 }

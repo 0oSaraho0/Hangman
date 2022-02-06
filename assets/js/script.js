@@ -1,5 +1,5 @@
 //https://www.worldometers.info/geography/alphabetical-list-of-countries/ infor for countries
-const geographyArray = ['Argentina', 'Bahamas', 'Cambodia', 'Denmark', 'Ethiopia', 'England', 'Finland', 'Guatemala', 'Haiti', 'Ireland', 'Indonesia', 'Japan', 'Kazakhstan', 'Lebanon', 'Madagascar', 'Mauritius', 'Mozambique', 'Norway', 'Oman', 'Paraguay', 'Portugal', 'Romania', 'Senegal', 'Seychelles', 'Spain', 'Scotland', 'Thailand', 'Togo', 'Turkey', 'Uruguay', 'Vietnam', 'Wales', 'Yemen', 'Zimbabwe'];
+const geographyArray = ['Atlas', 'Bahamas', 'Continent', 'Denmark', 'Ethiopia', 'England','Equator', 'Finland', 'Guatemala','Globe', 'Haiti','Hemisphere', 'Ireland', 'Indonesia', 'Japan', 'Kazakhstan', 'Lebanon','Longitude', 'Latitude','Madagascar', 'Mozambique','Mountain','Meridian','Map', 'Norway', 'Oman', 'Paraguay', 'Portugal', 'River','Romania', 'Senegal', 'Seychelles', 'Scotland','Tributary','Topography', 'Thailand', 'Togo', 'Turkey', 'Uruguay', 'Vietnam', 'Wales', 'Yemen', 'Zimbabwe'];
 //https://www.thoughtco.com/glossary-of-mathematics-definitions-4070804 infor for maths terms
 const mathsArray = ['Abacus', 'Algorithm', 'Array', 'Calculus', 'Cone', 'Decagon', 'Decimal', 'Diameter', 'Divide', 'Exponent', 'Formula', 'Fraction', 'Graph', 'Hexagon', 'Integer', 'Kilometer', 'Median', 'Multiply', 'Numerator', 'Octagon', 'Quadrant', 'Quotient', 'Radius', 'Ratio', 'Rectangle', 'Rhombus', 'Subtract', 'Tangent', 'Triangle', 'Variable', 'Volume', 'Unit'];
 //https://www.yourschoolgames.com/taking-part/our-sports/  https://www.afpe.org.uk/physical-education/glossary-of-terms/
@@ -8,7 +8,7 @@ const pEArray = ['Agility', 'Balance', 'Cricket', 'Fitness', 'Flexibility', 'Dan
 const rulesButton = document.getElementById('button-rules');
 const rules = document.getElementsByClassName('rules')[0];
 const choiceButtonsContainer = document.getElementsByClassName('subject-choice-screen')[0];
-
+const outsideSubjectButton = document.getElementById('subject-choice-button');
 /**
  * toggles the hide class on hidden element
  * @param {HTMLElement} hiddenElement 
@@ -22,6 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleHide(rules);
     });
     toggleHide(choiceButtonsContainer);
+    outsideSubjectButton.addEventListener('click', function() {
+        toggleHide(choiceButtonsContainer);
+    })
+    
 });
 
 /**
