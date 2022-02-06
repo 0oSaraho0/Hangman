@@ -107,9 +107,9 @@ for the text colour I chose
 
 
 # Existing bugs
-
+ I noticed that it was possible to input a blank space on the game and it would give give a false value and loose a life.  I tried to fix it by putting a min length of 1 onthe input box but this didn't work.  i will need to look into this further.
 # Fixed bugs
-
+ 
 
 ---
 
