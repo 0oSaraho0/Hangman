@@ -59,11 +59,12 @@ body {
 
 .subject-choice-screen {
     background-color: #406343;
-    border: 10px groove brown;
+    border: 10px;
     z-index: 1;
     height:36vh;
-    width:74vw;
+    width:100%;
     justify-content: center;
+    margin-top: 30px;
 }
 
 
