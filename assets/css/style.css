@@ -228,6 +228,12 @@ body {
     border-bottom: solid #FAEDF0;
 }
 
+.submit-button {
+    font-family: inherit;
+    background: inherit;
+    color: inherit;
+}
+
 .winner-screen {
     flex-direction: column;
     background-color: #406343;
