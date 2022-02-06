@@ -103,10 +103,26 @@ this.errorsLeft = 10;
         if (word[i] === letter) {
             document.getElementById('word').children[i].classList.remove('hidden-letter');
         } else {
-            document.getElementById('hangman').classList +='lifes-'+(hangman.errorsLeft +1);
+            drawHangman();
         }
     }
     usedLetters.push(letter);
+
+function drawHangman () {
+    let hangman = document.getElementById('hangman');
+    console.log(hangman)
+}
+});
+
+
+
+
+
+
+
+
+
+
 
 
     // TODO: Check answer here
@@ -131,7 +147,7 @@ this.errorsLeft = 10;
 
     console.log("The users guess was: " + guessedCorrectly)
 */
-});
+
 
 
 

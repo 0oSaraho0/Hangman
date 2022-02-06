@@ -88,7 +88,7 @@ body {
 
 #hangman {
     margin-top: 67px;
-    display: none;
+    height: 370px;
 }
 
 #hangman span {
@@ -187,6 +187,36 @@ body {
     width: 207px;
 }
 
+#hangman .life-1 {
+    display: none;
+}
+#hangman .life-2 {
+    display: none;
+}
+#hangman .life-3 {
+    display: none;
+}
+#hangman .life-4 {
+    display: none;
+}
+#hangman .life-5 {
+    display: none;
+}
+#hangman .life-6 {
+    display: none;
+}
+#hangman .life-7 {
+    display: none;
+}
+#hangman .life-8 {
+    display: none;
+}
+#hangman .life-9 {
+    display: none;
+}
+#hangman .life-10 {
+    display: none;
+}
 
 #word {
     float: left;
