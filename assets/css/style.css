@@ -62,12 +62,14 @@ body {
 }
 
 .rules {
+    
+    justify-content: center;
     background-color: #406343;
-    border: 10px groove brown;
+    border: 2px groove #FAEDF0;
     margin-top: 50px;
-    position: absolute;
-    margin-right: 15px;
     padding: 10px;
+    margin: auto;
+    max-width: 527px;
 }
 
 .rules ul {
@@ -79,8 +81,9 @@ body {
     z-index: 1;
     height:36vh;
     width:100%;
-    justify-content: center;
+    margin: auto;
     border: 2px groove white;
+    max-width: 436px;
 }
 
 
@@ -283,7 +286,7 @@ body {
     border: 2px groove #FAEDF0;
 }
 
-.looser-screen {
+#loser-screen {
     font-size: 22px;
     margin-top: -503px;
     text-align: center;
@@ -293,6 +296,8 @@ body {
     width: 100%;
     justify-content: center;
     border: 2px groove #FAEDF0;
+    z-index: 9999;
+    position: relative;
 }
 
 .hide {
