@@ -128,15 +128,16 @@ form.addEventListener('submit', function (event) {
         console.log(hangmanPieces);
 
         console.log(hangman)
+        if (wrongCount === 10) gameOver();
     }
 });
 function gameOver() {
-    if (wrongCount === 10){
-        let looser = document.getElementsByClassName('looser-screen');
+    
+        let looser = document.getElementsByClassName('looser-screen')[0];
         looser.classList.toggle('hide');
 
     }
-}
+
 gameOver();
 
 
