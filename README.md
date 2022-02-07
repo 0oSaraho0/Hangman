@@ -114,6 +114,7 @@ for the text colour I chose
  the hidden word currently accpets capital and lower case letters as different guesses. it also does not accept the furst letter of each word as correct unless it is a capital
 
 i fixed part of this problem but adding the code below.  this ensures only lower case letters are entered into the hidden word.
+
  for (let i = 0; i < randomWord.length; i++) {
         let currentWord = randomWord.toLowerCase();
         let newLetter = document.createElement('span');
@@ -124,6 +125,11 @@ i fixed part of this problem but adding the code below.  this ensures only lower
     } else {
         alert('Please enter letters only.');
         return false;
+
+
+        bug with mobiles. the keypad wants to input every letter as a capital but the word ony accepts lower case letters.  it is annoying having to switch it to lower case every time you enter a letter.
+
+        but with letters.  you can hightlight the word to cheat.
 # Fixed bugs
  
 

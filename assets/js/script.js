@@ -75,7 +75,7 @@ function displayWord(theArray) {
     }
 }
 
-let guessedLetter = document.getElementById('letter-guess');
+let guessedLetter = document.getElementById('letter-guess')
 
 // check letter is a letter and not a number and sends an alert if the wrong value is input.
 function checkLetter() {
@@ -114,31 +114,34 @@ form.addEventListener('submit', function (event) {
     }
     if (!word.includes(letter)) {
         ++wrongCount;
-        drawHangman()
+        drawHangman();
     }
     usedLetters.push(letter);
 
     function drawHangman() {
-    //    let hangman = document.getElementById('hangman');
+        //    let hangman = document.getElementById('hangman');
         let hangmanPieces = document.querySelectorAll('.life');
-            for(let j = 0; j < wrongCount; j++) {
-                    console.log(j)
-                    hangmanPieces[j].style.display='block';
-            }
-        console.log(hangmanPieces);
+        for (let j = 0; j < wrongCount; j++) {
+        
+            hangmanPieces[j].style.display = 'block';
+            console.log("wrong count is: " + wrongCount)
+console.log("hangman pieces are: " + hangmanPieces)
+        }
+    }
+    if (wrongCount === 9) {
+        gameOver();
+        
 
-        console.log(hangman)
-        if (wrongCount === 10) gameOver();
     }
 });
+
 function gameOver() {
+    let loser = document.getElementById('loser-screen');
+    loser.classList.toggle('hide');
     
-        let looser = document.getElementsByClassName('looser-screen')[0];
-        looser.classList.toggle('hide');
 
-    }
+}
 
-gameOver();
 
 
 
