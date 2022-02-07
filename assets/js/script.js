@@ -67,9 +67,10 @@ function displayWord(theArray) {
     console.log(word);
 
     for (let i = 0; i < randomWord.length; i++) {
+        let currentWord = randomWord.toLowerCase();
         let newLetter = document.createElement('span');
         newLetter.setAttribute('class', 'hidden-word hidden-letter');
-        newLetter.textContent = randomWord[i];
+        newLetter.textContent = currentWord[i];
         document.getElementById('word').appendChild(newLetter);
     }
 }
@@ -105,7 +106,7 @@ form.addEventListener('submit', function (event) {
     if (usedLetters.includes(letter)) {
         return;
     }
-  
+
     for (let i = 0; i < word.length; i++) {
         if (word[i] === letter) {
             document.getElementById('word').children[i].classList.remove('hidden-letter');

@@ -110,6 +110,20 @@ for the text colour I chose
  I noticed that it was possible to input a blank space on the game and it would give give a false value and loose a life.  I tried to fix it by putting a min length of 1 onthe input box but this didn't work.  i will need to look into this further.
 
  The subject title on the subject screen makes the screen disapear but does not select a subject.  This needs to be sorted but for now i have put hovers over the subjects making them more attractive to click.
+
+ the hidden word currently accpets capital and lower case letters as different guesses. it also does not accept the furst letter of each word as correct unless it is a capital
+
+i fixed part of this problem but adding the code below.  this ensures only lower case letters are entered into the hidden word.
+ for (let i = 0; i < randomWord.length; i++) {
+        let currentWord = randomWord.toLowerCase();
+        let newLetter = document.createElement('span');
+
+  let lettersInputIntoBox = /^[a-zA-Z]/;
+    if (guessedLetter.value.match(lettersInputIntoBox)) {
+        return true;
+    } else {
+        alert('Please enter letters only.');
+        return false;
 # Fixed bugs
  
 
