@@ -1,5 +1,5 @@
 //https://www.worldometers.info/geography/alphabetical-list-of-countries/ infor for countries
-const geographyArray = ['Atlas', 'Bahamas', 'Continent', 'Denmark', 'Ethiopia', 'England','Equator', 'Finland', 'Guatemala','Globe', 'Haiti','Hemisphere', 'Ireland', 'Indonesia', 'Japan', 'Kazakhstan', 'Lebanon','Longitude', 'Latitude','Madagascar', 'Mozambique','Mountain','Meridian','Map', 'Norway', 'Oman', 'Paraguay', 'Portugal', 'River','Romania', 'Senegal', 'Seychelles', 'Scotland','Tributary','Topography', 'Thailand', 'Togo', 'Turkey', 'Uruguay', 'Vietnam', 'Wales', 'Yemen', 'Zimbabwe'];
+const geographyArray = ['Atlas', 'Bahamas', 'Continent', 'Denmark', 'Ethiopia', 'England', 'Equator', 'Finland', 'Guatemala', 'Globe', 'Haiti', 'Hemisphere', 'Ireland', 'Indonesia', 'Japan', 'Kazakhstan', 'Lebanon', 'Longitude', 'Latitude', 'Madagascar', 'Mozambique', 'Mountain', 'Meridian', 'Map', 'Norway', 'Oman', 'Paraguay', 'Portugal', 'River', 'Romania', 'Senegal', 'Seychelles', 'Scotland', 'Tributary', 'Topography', 'Thailand', 'Togo', 'Turkey', 'Uruguay', 'Vietnam', 'Wales', 'Yemen', 'Zimbabwe'];
 //https://www.thoughtco.com/glossary-of-mathematics-definitions-4070804 infor for maths terms
 const mathsArray = ['Abacus', 'Algorithm', 'Array', 'Calculus', 'Cone', 'Decagon', 'Decimal', 'Diameter', 'Divide', 'Exponent', 'Formula', 'Fraction', 'Graph', 'Hexagon', 'Integer', 'Kilometer', 'Median', 'Multiply', 'Numerator', 'Octagon', 'Quadrant', 'Quotient', 'Radius', 'Ratio', 'Rectangle', 'Rhombus', 'Subtract', 'Tangent', 'Triangle', 'Variable', 'Volume', 'Unit'];
 //https://www.yourschoolgames.com/taking-part/our-sports/  https://www.afpe.org.uk/physical-education/glossary-of-terms/
@@ -9,6 +9,7 @@ const rulesButton = document.getElementById('button-rules');
 const rules = document.getElementsByClassName('rules')[0];
 const choiceButtonsContainer = document.getElementsByClassName('subject-choice-screen')[0];
 const outsideSubjectButton = document.getElementById('subject-choice-button');
+let wrongCount = 0;
 /**
  * toggles the hide class on hidden element
  * @param {HTMLElement} hiddenElement 
@@ -18,20 +19,20 @@ function toggleHide(hiddenElement) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    rulesButton.addEventListener('click', function(){
+    rulesButton.addEventListener('click', function () {
         toggleHide(rules);
     });
     toggleHide(choiceButtonsContainer);
-    outsideSubjectButton.addEventListener('click', function() {
+    outsideSubjectButton.addEventListener('click', function () {
         toggleHide(choiceButtonsContainer);
     })
-    
+
 });
 
 /**
  *Hides choice buttons and plays chosen category.
-* @param {Event} e 
-*/
+ * @param {Event} e 
+ */
 function clickButton(e) {
     let category = (e.target.dataset.type);
     toggleHide(choiceButtonsContainer);
@@ -74,6 +75,8 @@ function displayWord(theArray) {
 }
 
 let guessedLetter = document.getElementById('letter-guess');
+
+// check letter is a letter and not a number and sends an alert if the wrong value is input.
 function checkLetter() {
     let lettersInputIntoBox = /^[a-zA-Z]/;
     if (guessedLetter.value.match(lettersInputIntoBox)) {
@@ -99,24 +102,41 @@ form.addEventListener('submit', function (event) {
     form.reset();
     console.log(word.includes(letter));
 
-    if (usedLetters.includes(letter)){
+    if (usedLetters.includes(letter)) {
         return;
     }
-this.errorsLeft = 10;
+  
     for (let i = 0; i < word.length; i++) {
         if (word[i] === letter) {
             document.getElementById('word').children[i].classList.remove('hidden-letter');
-        } else {
-            drawHangman();
         }
+    }
+    if (!word.includes(letter)) {
+        ++wrongCount;
+        drawHangman()
     }
     usedLetters.push(letter);
 
-function drawHangman () {
-    let hangman = document.getElementById('hangman');
-    console.log(hangman)
-}
+    function drawHangman() {
+    //    let hangman = document.getElementById('hangman');
+        let hangmanPieces = document.querySelectorAll('.life');
+            for(let j = 0; j < wrongCount; j++) {
+                    console.log(j)
+                    hangmanPieces[j].style.display='block';
+            }
+        console.log(hangmanPieces);
+
+        console.log(hangman)
+    }
 });
+function gameOver() {
+    if (wrongCount === 10){
+        let looser = document.getElementsByClassName('looser-screen');
+        looser.classList.toggle('hide');
+
+    }
+}
+gameOver();
 
 
 
@@ -127,10 +147,8 @@ function drawHangman () {
 
 
 
-
-
-    // TODO: Check answer here
-    // remove all correctly guessed letter from the word array
+// TODO: Check answer here
+// remove all correctly guessed letter from the word array
 /*   let guessedCorrectly = false;
     word = word.filter((l, i) => {
         
@@ -151,8 +169,3 @@ function drawHangman () {
 
     console.log("The users guess was: " + guessedCorrectly)
 */
-
-
-
-
-

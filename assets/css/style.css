@@ -121,7 +121,7 @@ body {
     padding: 16px;
     margin: 4px;
     border: 25px groove brown;
-    height: 120vh;
+    height: 109vh;
     width: 100%;
 }
 
@@ -226,34 +226,7 @@ body {
     width: 207px;
 }
 
-#hangman .life-1 {
-    display: none;
-}
-#hangman .life-2 {
-    display: none;
-}
-#hangman .life-3 {
-    display: none;
-}
-#hangman .life-4 {
-    display: none;
-}
-#hangman .life-5 {
-    display: none;
-}
-#hangman .life-6 {
-    display: none;
-}
-#hangman .life-7 {
-    display: none;
-}
-#hangman .life-8 {
-    display: none;
-}
-#hangman .life-9 {
-    display: none;
-}
-#hangman .life-10 {
+#hangman .life {
     display: none;
 }
 
@@ -345,10 +318,14 @@ body {
     }
 }
 
-@media screen and (max-width: 317px)  {
+@media screen and (max-width: 356px)  {
 
     #subject-choice-button{
         font-size: 18px;
+    }
+
+    #heading {
+        font-size: 218%;
     }
 
     #subject-choice-button:hover{
