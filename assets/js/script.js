@@ -59,11 +59,13 @@ pickSubject();
 
 // picks random word from the subject array and inputs it into separate spans in the html as a hidden word.  
 let word = [];
+let guessedLetters =[];
 
 function displayWord(theArray) {
     let randomWord = theArray[Math.floor(Math.random() * theArray.length)];
     document.getElementById('word').innerHTML = "";
     word = randomWord.split('');
+    guessedLetters = randomWord.split('');
     console.log(word);
 
     for (let i = 0; i < randomWord.length; i++) {
@@ -110,11 +112,18 @@ form.addEventListener('submit', function (event) {
     for (let i = 0; i < word.length; i++) {
         if (word[i] === letter) {
             document.getElementById('word').children[i].classList.remove('hidden-letter');
-        }
+        }    
     }
     if (!word.includes(letter)) {
         ++wrongCount;
         drawHangman();
+    }
+    else if (word.includes(letter)) {
+        guessedLetters = guessedLetters.filter(element => element !== letter)
+        console.log(guessedLetters);
+    }
+    if (guessedLetters.length === 0) {
+        gameWin();
     }
     usedLetters.push(letter);
 
@@ -124,8 +133,6 @@ form.addEventListener('submit', function (event) {
         for (let j = 0; j < wrongCount; j++) {
         
             hangmanPieces[j].style.display = 'block';
-            console.log("wrong count is: " + wrongCount)
-console.log("hangman pieces are: " + hangmanPieces)
         }
     }
     if (wrongCount === 10) {
@@ -143,6 +150,12 @@ function gameOver() {
 
 }
 
+function gameWin(){
+    let winner = document.getElementById('winner-screen');
+    winner.classList.toggle('hide');
+    guessedLetter.disabled = 'true';
+    
+}
 
 
 

@@ -274,7 +274,7 @@ body {
     font-size: 19px;
 }
 
-.winner-screen {
+#winner-screen {
     font-size: 22px;
     margin-top: -503px;
     text-align: center;
