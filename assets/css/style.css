@@ -284,6 +284,7 @@ body {
     width: 100%;
     justify-content: center;
     border: 2px groove #FAEDF0;
+    position: relative;
 }
 
 #loser-screen {
