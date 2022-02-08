@@ -138,6 +138,7 @@ console.log("hangman pieces are: " + hangmanPieces)
 function gameOver() {
     let loser = document.getElementById('loser-screen');
     loser.classList.toggle('hide');
+    guessedLetter.disabled = 'true';
     
 
 }
