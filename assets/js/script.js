@@ -107,6 +107,9 @@ form.addEventListener('submit', function (event) {
     if (usedLetters.includes(letter)) {
         return;
     }
+    usedLetters.push(letter);
+    document.getElementById('used-letters-box').innerHTML += letter;
+    
 
     for (let i = 0; i < word.length; i++) {
         if (word[i] === letter) {

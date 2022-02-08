@@ -58,8 +58,7 @@
             <input name="letterInput" id="letter-guess" type="text" maxlength="1" minlength="1" onkeyup="this.value = this.value.toLowerCase();">
             <input type="submit" class="submit-button" value="Submit Answer">
         </form>
-        
-        <div id="wrong-letters-box"></div>
+        <p id="used-letters-box"></p>
         <div id="winner-screen" class="hide">Congratulations! You Won! You saved the hangman!
             <p> <button id="restart-button" onclick="location.reload()">Restart</button></p>
         </div>
