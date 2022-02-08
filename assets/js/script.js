@@ -62,17 +62,16 @@ let word = [];
 let guessedLetters =[];
 
 function displayWord(theArray) {
-    let randomWord = theArray[Math.floor(Math.random() * theArray.length)];
+    let randomWord = theArray[Math.floor(Math.random() * theArray.length)].toLowerCase();
     document.getElementById('word').innerHTML = "";
     word = randomWord.split('');
     guessedLetters = randomWord.split('');
     console.log(word);
 
     for (let i = 0; i < randomWord.length; i++) {
-        let currentWord = randomWord.toLowerCase();
         let newLetter = document.createElement('span');
         newLetter.setAttribute('class', 'hidden-word hidden-letter');
-        newLetter.textContent = currentWord[i];
+        newLetter.textContent = randomWord[i];
         document.getElementById('word').appendChild(newLetter);
     }
 }
