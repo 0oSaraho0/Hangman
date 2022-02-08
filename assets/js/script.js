@@ -128,7 +128,7 @@ form.addEventListener('submit', function (event) {
 console.log("hangman pieces are: " + hangmanPieces)
         }
     }
-    if (wrongCount === 9) {
+    if (wrongCount === 10) {
         gameOver();
         
 
