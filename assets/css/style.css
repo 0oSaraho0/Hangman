@@ -300,6 +300,27 @@ body {
     position: relative;
 }
 
+
+#restart-button {
+    background-color: #406343;
+    font-family: 'Finger Paint', sans-serif;
+    color: #FAEDF0;
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 39px;
+}
+
+
+
+#restart-button:hover {
+    background-color: #FAEDF0;
+    color: #406343;
+    font-size: 22px;
+    font-family: 'Finger Paint', sans-serif;
+}
+
+
+
 .hide {
     display: none;
 }
