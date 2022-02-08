@@ -87,6 +87,7 @@ body {
     margin: auto;
     border: 2px groove white;
     max-width: 436px;
+    margin-top: 53px;
 }
 
 
@@ -204,9 +205,7 @@ body {
     float: left;
     height: 50px;
     margin-top: -256px;
-    transform: rotate( 
-45deg
- );
+    transform: rotate(45deg);
 }
 
 #hangman .right-leg {
@@ -346,9 +345,31 @@ body {
     }
 
     #word {
-        font-size: 20px;
+        padding: 0 0px;
+        font-size: 30px;
+        margin-top: 2px;
+        letter-spacing: 5px;
     }
+
+    #hangman {
+        margin-top: 28px;
+    }
+
+    #form {
+        margin-top: 23px;
+    }
+
+    #used-letters-box {
+
+    margin-top: 18px;
+    font-size: 20px;
+    letter-spacing: 19px;
 }
+    }
+
+   
+
+
 
 @media screen and (max-width: 356px)  {
 
@@ -370,5 +391,10 @@ body {
 
     #button-rules:hover{
         font-size: 17px;
+    }
+
+    #letter-guess{
+        font-size: 16px;
+        width: 29px;
     }
 }
