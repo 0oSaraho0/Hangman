@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleHide(choiceButtonsContainer);
     outsideSubjectButton.addEventListener('click', function () {
         toggleHide(choiceButtonsContainer);
-    })
+    });
 
 });
 
@@ -76,7 +76,7 @@ function displayWord(theArray) {
     }
 }
 
-let guessedLetter = document.getElementById('letter-guess')
+let guessedLetter = document.getElementById('letter-guess');
 
 // check letter is a letter and not a number and sends an alert if the wrong value is input.
 function checkLetter() {
@@ -120,7 +120,7 @@ form.addEventListener('submit', function (event) {
         drawHangman();
     }
     else if (word.includes(letter)) {
-        guessedLetters = guessedLetters.filter(element => element !== letter)
+        guessedLetters = guessedLetters.filter(element => element !== letter);
         console.log(guessedLetters);
     }
     if (guessedLetters.length === 0) {

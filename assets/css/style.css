@@ -128,7 +128,7 @@ body {
     padding: 16px;
     margin: 4px;
     border: 25px groove #663300;
-    height: 109vh;
+    height: 120vh;
     width: 100%;
 }
 
@@ -375,13 +375,15 @@ body {
         margin-right: 0;
     }
 
-/*    #used-letters-box {
-    margin-top: 5px;
-    font-size: 20px;
-    letter-spacing: 19px;
-    float: left;
-    position: relative;
-}*/
+    #used-letters-box {
+        margin-top: 5px;
+        font-size: 20px;
+        letter-spacing: 19px;
+        float: left;
+        position: relative;
+        overflow-wrap: anywhere;
+
+}
 }
     
 

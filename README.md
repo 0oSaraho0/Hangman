@@ -123,6 +123,14 @@ The subject choice screen appears first advising the player to 'pick a subject. 
 
 ![Subject Choice Screen](assets/images/subject-choice-screen.png)
 
+Once the subject has been chosen the screen dissapears and the hidden word underlines appear.  The text telling the user to enter a letter, and the submit button are in the same font to keep with the theme of the game.  The submit button also has the same hover theme as the other buttons on the page. This is the view on a mobile screen.  Above are the spaces where the letters will appear when guessed correctly
+
+![Hidden Word and Submit Letter](assets/images/hidden-word-and-enter-letter-small-screen.png)
+
+The view on the slightly larger screen shows letter input into the box.  It shows as a black letter on a white background so that it stands out.
+
+![Hidden Word and Submit Letter](assets/images/hidden-word-and-enter-letter.png)
+
 ---
 
 ## Features left to implement
