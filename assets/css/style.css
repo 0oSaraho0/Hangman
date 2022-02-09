@@ -246,9 +246,23 @@ body {
 }
 
 #form {
-    margin-top: 80px;
-    display: inline-block;
+    margin-top: 23px;
+    float: right;
+    margin-right: 134px;
 }
+/*
+#used-letters-box {
+    margin-top: -300px;
+    margin-right: 48px;
+    max-width: 367px;
+    font-size: 32px;
+    margin-left: 567px;
+    letter-spacing: 57px;
+    height: 57px;
+    word-wrap: break-spaces;
+    overflow-wrap: anywhere;
+    position:absolute;
+}*/
 .submit-button {
     font-family: inherit;
     background: inherit;
@@ -357,19 +371,19 @@ body {
 
     #form {
         margin-top: 23px;
+        float: left;
+        margin-right: 0;
     }
 
-    #used-letters-box {
-
-    margin-top: 18px;
+/*    #used-letters-box {
+    margin-top: 5px;
     font-size: 20px;
     letter-spacing: 19px;
+    float: left;
+    position: relative;
+}*/
 }
-    }
-
-   
-
-
+    
 
 @media screen and (max-width: 356px)  {
 
@@ -396,5 +410,9 @@ body {
     #letter-guess{
         font-size: 16px;
         width: 29px;
+    }
+
+    .hidden-letter {
+        padding: 0 6px;
     }
 }
