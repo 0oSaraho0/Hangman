@@ -1,5 +1,7 @@
+/* google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Covered+By+Your+Grace&family=Finger+Paint&family=Gloria+Hallelujah&family=Permanent+Marker&family=Schoolbell&display=swap');
 
+/*general page style*/
 * {
     margin: 0;
     padding: 0;
@@ -11,29 +13,33 @@ body {
     font-weight: 300;
     color: #FAEDF0;
     display: flex;
-    
+
 
 }
 
+/* heading style*/
 #heading {
     justify-content: center;
     font-size: 250%;
     padding: 7px;
-    
+
 }
 
+/* hidden word placement styling*/
 .hidden-word {
     border-bottom: solid 2px #FAEDF0;
-    margin-left: 30px;    
-    
+    margin-left: 30px;
+
 }
 
+/* hidden letters styling that is removed by js to make the letter appear*/
 .hidden-letter {
     color: transparent;
     font-size: 0;
-    padding:0 10px;
-
+    padding: 0 10px;
+    /* rules page button styling*/
 }
+
 #button-rules:hover {
     background-color: #FAEDF0;
     color: #406343;
@@ -48,6 +54,7 @@ body {
     font-size: 20px;
 }
 
+/*subject choice button styling*/
 #subject-choice-button {
     background-color: #406343;
     font-family: 'Finger Paint', sans-serif;
@@ -64,8 +71,9 @@ body {
     font-family: 'Finger Paint', sans-serif;
 }
 
+/*rules page styling*/
 .rules {
-    
+
     justify-content: center;
     background-color: #406343;
     border: 2px groove #FAEDF0;
@@ -79,19 +87,19 @@ body {
     padding-left: 30px;
 }
 
+/*sunject screen styling*/
 .subject-choice-screen {
     background-color: #406343;
     z-index: 1;
-    height:36vh;
-    width:100%;
+    height: 36vh;
+    width: 100%;
     margin: auto;
     border: 2px groove white;
     max-width: 436px;
     margin-top: 53px;
 }
 
-
-
+/* subject choices buttons styling (geography, maths, pe)*/
 .subject {
     background-color: #406343;
     font-family: inherit;
@@ -120,7 +128,7 @@ body {
     font-size: 24px;
 }
 
-
+/*Game area styling*/
 .game-area {
     justify-items: center;
     background-color: #406343;
@@ -131,35 +139,36 @@ body {
     width: 100%;
 }
 
+/*hangman */
 #hangman {
     margin-top: 67px;
     height: 370px;
 }
 
 #hangman span {
-    border:solid 4px #FAEDF0;
+    border: solid 4px #FAEDF0;
     background-color: #FAEDF0;
 }
 
-#hangman div{
+#hangman div {
     background: #FAEDF0;
 
-    
+
 
 }
-    
-#hangman .side-bar{
-    width:8px;
-    height:368px;
+
+#hangman .side-bar {
+    width: 8px;
+    height: 368px;
     margin-left: 10px;
-    
+
 }
 
 #hangman .top-bar {
-    width:131px;
-    height:8px;
-    margin-left:10px;
-    
+    width: 131px;
+    height: 8px;
+    margin-left: 10px;
+
 }
 
 #hangman .noose {
@@ -176,8 +185,8 @@ body {
     height: 45px;
     border-radius: 100%;
     background: none;
-    border:solid 8px #FAEDF0;
-    float:left;
+    border: solid 8px #FAEDF0;
+    float: left;
     margin-top: -308px;
     margin-left: 110px;
 }
@@ -194,9 +203,7 @@ body {
     float: left;
     height: 50px;
     margin-top: -256px;
-    transform: rotate(
-134deg
-);
+    transform: rotate(134deg);
 }
 
 #hangman .left-arm {
@@ -212,9 +219,7 @@ body {
     float: left;
     height: 74px;
     margin-top: -169px;
-    transform: rotate(
-        36deg
-        );
+    transform: rotate(36deg);
 }
 
 #hangman .left-leg {
@@ -222,18 +227,18 @@ body {
     float: left;
     height: 74px;
     margin-top: -169px;
-    transform: rotate(
-144deg
-)
-}#hangman .bottom-bar {
-    float:left;
+    transform: rotate(144deg)
+}
+
+#hangman .bottom-bar {
+    float: left;
     width: 207px;
 }
 
 #hangman .life {
     display: none;
 }
-
+/*hidden word placement*/
 #word {
     float: left;
     margin-top: 20px;
@@ -243,13 +248,14 @@ body {
 .letter {
     border-bottom: solid #FAEDF0;
 }
-
+/* letter input form*/
 #form {
     margin-top: 23px;
     float: right;
     margin-right: 134px;
 }
-/*
+
+/*used letters display area*/
 #used-letters-box {
     margin-top: -300px;
     margin-right: 48px;
@@ -261,7 +267,8 @@ body {
     word-wrap: break-spaces;
     overflow-wrap: anywhere;
     position:absolute;
-}*/
+}
+/*form submit button*/
 .submit-button {
     font-family: inherit;
     background: inherit;
@@ -276,19 +283,19 @@ body {
     color: #406343;
     font-size: 20px;
 }
-
+/*form input box*/
 #letter-guess {
     font-family: inherit;
     font-size: 21px;
     width: 33px;
     text-align: center;
-    
-}
 
+}
+/* form Enter Letter label*/
 .guess {
     font-size: 19px;
 }
-
+/*winner screen*/
 #winner-screen {
     font-size: 22px;
     margin-top: -503px;
@@ -301,7 +308,7 @@ body {
     border: 2px groove #FAEDF0;
     position: relative;
 }
-
+/*looser screen*/
 #loser-screen {
     font-size: 22px;
     margin-top: -503px;
@@ -316,7 +323,7 @@ body {
     position: relative;
 }
 
-
+/*restart buttons on winner and loser pages*/
 #restart-button-win {
     background-color: #406343;
     font-family: 'Finger Paint', sans-serif;
@@ -348,44 +355,44 @@ body {
     font-size: 22px;
     font-family: 'Finger Paint', sans-serif;
 }
-
+/*hide styling*/
 .hide {
     display: none;
 }
-
-@media screen and (max-width: 620px)  {
+/* styling for media screens 620px or less*/
+@media screen and (max-width: 620px) {
     .hidden-word {
         margin: 0px 9px;
     }
-
+/*620px screen*/
     #word {
         font-size: 25px;
     }
 }
 
-
-@media screen and (max-width: 450px)  {
+/*styling for screens 450px or less*/
+@media screen and (max-width: 450px) {
     .hidden-word {
         margin: 0px 3px;
     }
-
+/* 450px screens*/
     #word {
         padding: 0 0px;
         font-size: 30px;
         margin-top: 2px;
         letter-spacing: 5px;
     }
-
+/*450px screen*/
     #hangman {
         margin-top: 28px;
     }
-
+/*450px screen*/
     #form {
         margin-top: 23px;
         float: left;
         margin-right: 0;
     }
-
+/*450 px screen*/
     #used-letters-box {
         margin-top: 5px;
         font-size: 20px;
@@ -394,37 +401,38 @@ body {
         position: relative;
         overflow-wrap: anywhere;
 
-}
-}
-    
-
-@media screen and (max-width: 356px)  {
-
-    #subject-choice-button{
-        font-size: 17px;
     }
+}
 
+/*styling for screens 356px or less */
+@media screen and (max-width: 356px) {
+
+/*  heading 350px screens*/
     #heading {
         font-size: 218%;
     }
-
-    #subject-choice-button:hover{
-        font-size:17px;
-    }
-
-    #button-rules{
+/* busject choice button 350px screens*/
+    #subject-choice-button:hover {
         font-size: 17px;
     }
 
-    #button-rules:hover{
+    #subject-choice-button {
+        font-size: 17px;
+    }
+/* button for rules 350px screens*/    
+    #button-rules {
         font-size: 17px;
     }
 
-    #letter-guess{
+    #button-rules:hover {
+        font-size: 17px;
+    }
+/* form input box 350px*/
+    #letter-guess {
         font-size: 16px;
         width: 29px;
     }
-
+/* hidden letter 350px*/
     .hidden-letter {
         padding: 0 6px;
     }
