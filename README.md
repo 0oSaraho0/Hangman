@@ -42,13 +42,13 @@ This is an interactive game based on the original style of hangman. I have taken
 
 ## Initial Concept
 
-The idea for this game is to create an online version of the pen and paper game hangman.  I have decided to keep to the original theme of hanging the stick man.  Giving it the name 'Old Skool Hangman' I have played on the idea that this is the original 'old school' version.
+The idea for this game is to create an online version of the pen and paper game hangman.  I have decided to keep to the original theme of hanging the stick man.  Giving it the name 'Old Skool Hangman' I have played on the idea that this is the original 'old school' version with a back to school theme played on a virtual blackboard.
 
 I have used javascript, CSS and HTML to create this game.
 
 The game is targeted at adults who might rememeber playing hangman at school as a child and want to spend a few minutes of their day taking their mind of other things testing their knowlege guessing words related to subjects taught in school.
 
-The game could be easily addapted with different subject choices by changing the randome words to be guessed.
+The game could be easily addapted with different subject choices by changing the random words to be guessed.
 
 ## Site Goals
 
@@ -68,28 +68,46 @@ The site will be based on the following user needs.
 
 # Wireframes
 
-This time i drew my wireframes out roughly on paper before I started.
+I drew my wireframes using Balsamiq.
+
+![Large Screen Wireframe](assets/images/wireframe-large-screen.png)
+![Small Screen Wireframe](assets/images/wireframe-small-screen.png)
 
 ---
 
 ## Colour Schemes
 
 I went for a simple colour scheme.  
-I wanted the game to look like it was being played on an old blackboard.
-I chose 
-[#406343](board-colour.png)
-because it is the colour of an old chalk board.
-for the text colour I chose
-[#FAEDF0](text-colour.png)
 
+I wanted the game to look like it was being played on an old blackboard as part of the back to school theme. 
 
+I chose #406343 for the background because it is the colour of an old chalk board.
+
+![#406343](assets/images/board-colour.png)
+
+For the text colour I chose #FAEDF0 because it looks like chalk writing on the board.
+
+![#FAEDF0](assets/images/text-colour.png)
+
+I have used #663300 because it looks like a wooden frame surrounding the chalkboard.
+
+![#663300](assets/images/border-brown.png)
+
+------
 
 ## Typography
-
+for this website i chose the font 'finger-paint' for all of the text.  I chose this because it has the look and feel of handwriting on a chalkboard.  This will help provide that feeling of nostalga at being back at school.
 ---
 
 ## Imagery
 
+For the image of the Hangman I went for a simple stickman image just like it would have been drawn when playing as a kid.  The image is made out of separate divs and spans so that they can appear separately as the game is played.
+
+![Hangman](assets/images/hangman-figure.png)
+
+The main game board is made to look like a chalk board that the game is being played on.
+
+![Blackboard](assets/images/gameboard-and-title.png)
 
 ---
 
@@ -97,9 +115,13 @@ for the text colour I chose
 
 ## Existing Features
 
+The title Old Skool Hangman writting in 'finger paint' font that conveys handwriting on a chalkboard.
 
+![Blackboard](assets/images/gameboard-and-title.png)
 
+The subject choice screen appears first advising the player to 'pick a subject.  When the player hovers over the subject hey show a negative image button that can be clicked.  This gives the user a clear idea that they can click that choice.
 
+![Subject Choice Screen](assets/images/subject-choice-screen.png)
 
 ---
 
@@ -109,7 +131,6 @@ for the text colour I chose
 # Existing bugs
  I noticed that it was possible to input a blank space on the game and it would give give a false value and loose a life.  I tried to fix it by putting a min length of 1 onthe input box but this didn't work.  i will need to look into this further.
 
- The subject title on the subject screen makes the screen disapear but does not select a subject.  This needs to be sorted but for now i have put hovers over the subjects making them more attractive to click.
 
  the hidden word currently accpets capital and lower case letters as different guesses. it also does not accept the furst letter of each word as correct unless it is a capital
 
@@ -118,13 +139,12 @@ i fixed part of this problem but adding the code below.  this ensures only lower
  for (let i = 0; i < randomWord.length; i++) {
         let currentWord = randomWord.toLowerCase();
         let newLetter = document.createElement('span');
+        
+        however this did not fix the problem as the initial letter was still only letting a capital letter be input.  i have now fixed the problem with the following code.  it turned out the .toLowerCase() was being added after i had split the word so it needed to be added a little earlier when the word taken from the array.
 
-  let lettersInputIntoBox = /^[a-zA-Z]/;
-    if (guessedLetter.value.match(lettersInputIntoBox)) {
-        return true;
-    } else {
-        alert('Please enter letters only.');
-        return false;
+ function displayWord(theArray) {
+    let randomWord = theArray[Math.floor(Math.random() * theArray.length)].toLowerCase();
+    document.getElementById('word').innerHTML = "";
 
 
         bug with mobiles. the keypad wants to input every letter as a capital but the word ony accepts lower case letters.  it is annoying having to switch it to lower case every time you enter a letter.
