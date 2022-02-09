@@ -121,7 +121,7 @@ letters from the word to calculate the win*/
     if (guessedLetters.length === 0) {
         gameWin();
     }
-    usedLetters.push(letter);
+
 // Displays the hangman pieces on each wrong entry and runs gameover() when wrongCount = 10
     function drawHangman() {
         let hangmanPieces = document.querySelectorAll('.life');
