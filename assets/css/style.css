@@ -317,7 +317,7 @@ body {
 }
 
 
-#restart-button {
+#restart-button-win {
     background-color: #406343;
     font-family: 'Finger Paint', sans-serif;
     color: #FAEDF0;
@@ -326,16 +326,28 @@ body {
     margin-top: 39px;
 }
 
+#restart-button-lose {
+    background-color: #406343;
+    font-family: 'Finger Paint', sans-serif;
+    color: #FAEDF0;
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 39px;
+}
 
-
-#restart-button:hover {
+#restart-button-win:hover {
     background-color: #FAEDF0;
     color: #406343;
     font-size: 22px;
     font-family: 'Finger Paint', sans-serif;
 }
 
-
+#restart-button-lose:hover {
+    background-color: #FAEDF0;
+    color: #406343;
+    font-size: 22px;
+    font-family: 'Finger Paint', sans-serif;
+}
 
 .hide {
     display: none;
