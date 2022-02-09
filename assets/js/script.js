@@ -84,7 +84,6 @@ function checkLetter() {
     if (guessedLetter.value.match(lettersInputIntoBox)) {
         return true;
     } else {
-        alert('Please enter letters only.');
         return false;
     }
 }
