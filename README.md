@@ -96,7 +96,8 @@ I have used #663300 because it looks like a wooden frame surrounding the chalkbo
 ------
 
 ## Typography
-for this website i chose the font 'finger-paint' for all of the text.  I chose this because it has the look and feel of handwriting on a chalkboard.  This will help provide that feeling of nostalga at being back at school.
+
+For this website i chose the font 'finger-paint' for all of the text.  I chose this because it has the look and feel of handwriting on a chalkboard.  This will help provide that feeling of nostalga at being back at school.
 ---
 
 ## Imagery
@@ -131,41 +132,43 @@ The view on the slightly larger screen shows letter input into the box.  It show
 
 ![Hidden Word and Submit Letter](assets/images/hidden-word-and-enter-letter.png)
 
+The used letters show up on screen so the player knows at a glance what has been used.  Here is the view of the small screen gameplay.
+
+![Small Screen Hidden Letter](assets/images/gameplay-small-screen.png)
 ---
 
 ## Features left to implement
 
+There are a number of other features I would like to implement moving forward.
 
-# Existing bugs
- I noticed that it was possible to input a blank space on the game and it would give give a false value and loose a life.  I tried to fix it by putting a min length of 1 onthe input box but this didn't work.  i will need to look into this further.
+- The hangman is currently made out of divs and the lines are very straight and neet.  I would like to draw the hangman and import the imgaes to give it a more authentically drawn look.
+- I would like to add animations at the winning and loosing sections of the game of the hangman happy at beings saved or being hung, before the loosing screen pops up.
+- I would like to make the winning and loosing screens more intersting with images of the aforementioned happy or sand hangman.
+- I would like to add difficulty levels to give an added dimension to the game in terms of dificulty.
+- I would like to add an overall score of games won and lost.
 
+#  Bugs
+ I noticed that it was possible to input a blank space on the game and it would give give a false value and loose a life.  I tried to fix it by putting a min length of 1 onthe input box but this didn't work.  This is currently still an existing bug.  It does make the user loose a life which is bad ux but it only does it once.
 
- the hidden word currently accpets capital and lower case letters as different guesses. it also does not accept the furst letter of each word as correct unless it is a capital
+ The hidden word currently accpets capital and lower case letters as different guesses. it also does not accept the furst letter of each word as correct unless it is a capital.  I fixed part of this problem but adding the code below.  This ensures only lower case letters are entered into the hidden word.
 
-i fixed part of this problem but adding the code below.  this ensures only lower case letters are entered into the hidden word.
+ ```for (let i = 0; i < randomWord.length; i++) {
+let currentWord = randomWord.toLowerCase();
+let newLetter = document.createElement('span');
+```        
+however this did not fix the problem as the initial letter was still only letting a capital letter be input.  I have now fixed the problem with the following code.  It turned out the .toLowerCase() was being added after i had split the word so it needed to be added a little earlier when the word taken from the array.
 
- for (let i = 0; i < randomWord.length; i++) {
-        let currentWord = randomWord.toLowerCase();
-        let newLetter = document.createElement('span');
-        
-        however this did not fix the problem as the initial letter was still only letting a capital letter be input.  i have now fixed the problem with the following code.  it turned out the .toLowerCase() was being added after i had split the word so it needed to be added a little earlier when the word taken from the array.
-
- function displayWord(theArray) {
-    let randomWord = theArray[Math.floor(Math.random() * theArray.length)].toLowerCase();
-    document.getElementById('word').innerHTML = "";
-
-
-        bug with mobiles. the keypad wants to input every letter as a capital but the word ony accepts lower case letters.  it is annoying having to switch it to lower case every time you enter a letter.
-
-        but with letters.  you can hightlight the word to cheat.
-# Fixed bugs
- 
+```function displayWord(theArray) {
+let randomWord = theArray[Math.floor(Math.random() * theArray.length)].toLowerCase();
+document.getElementById('word').innerHTML = "";
+```
+There is a bug with the hidden letters.  You can hightlight the word to cheat.  I have fixed this by adding a font size of 0 so the letters cant be seen and padding so that the bottom border can be seen.
 
 ---
 
 # Testing
 
-
+## JSHint Test
 
 ## Wave Test
 
