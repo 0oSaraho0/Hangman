@@ -61,10 +61,12 @@
             <label for="letter-guess" class="guess">Enter Letter:</label>
             <input name="letterInput" id="letter-guess" type="text" maxlength="1" minlength="1" onkeyup="this.value = this.value.toLowerCase()" required pattern="[a-zA-Z]">
             <input type="submit" class="submit-button" value="Submit Answer">
-            <p>Please input letters only</p>
+            <p id="letters-only-please">Please input letters only</p>
         </form>
     <!--Area for used game letters-->    
-        <div id="used-letters-box"></div>
+        <div id="used-letters-box">
+            <p id="used-letters-title">Used Letters</p>
+        </div>
     <!--Winner pop up screen with restart button-->    
         <div id="winner-screen" class="hide">Congratulations! You Won! You saved the hangman!
             <br> <button id="restart-button-win" onclick="location.reload()">Restart</button>

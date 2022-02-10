@@ -256,12 +256,17 @@ body {
 }
 
 /*used letters display area*/
+#used-letters-title {
+    font-size: 18px;
+    letter-spacing: 0px;
+}
+
 #used-letters-box {
     margin-top: -300px;
     margin-right: 48px;
     max-width: 367px;
     font-size: 32px;
-    margin-left: 567px;
+    margin-left: 652px;
     letter-spacing: 57px;
     height: 57px;
     word-wrap: break-spaces;
@@ -289,8 +294,12 @@ body {
     font-size: 21px;
     width: 33px;
     text-align: center;
-
 }
+
+#letters-only-please {
+    font-size: 12px;
+}
+
 /* form Enter Letter label*/
 .guess {
     font-size: 19px;
@@ -390,9 +399,18 @@ body {
     }
     #used-letters-box {
         font-size: 24px;
-        margin-left: 255px;
+        margin-left: 225px;
         letter-spacing: 34px;
         max-width: 245;
+    }
+}
+
+
+/* small section styling for screens 500px or less*/
+@media screen and (max-width: 500px) {
+    #used-letters-box {
+
+    margin-left: 218;
     }
 }
 
@@ -425,7 +443,7 @@ body {
         font-size: 20px;
         letter-spacing: 19px;
         float: left;
-        position: absolute;
+        position: relative;
         overflow-wrap: anywhere;
         max-width: 200px;
         margin-left: 0;
