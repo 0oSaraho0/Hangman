@@ -2,33 +2,14 @@
 
 # Old Skool Hangman
 
-![Meda Screens](assets/images/meda-screens.png)
+![Meda Screens](assets/images/media-screens.png)
 
 
 [Old Skool Hangman Live Site](https://0osaraho0.github.io/Hangman//)
 
 # Table of Contents
 
-- [About](#about)
-- [User Experience (UX)](#user-experience--ux-)
-- [Wireframes](#wireframes)
-  * [Colour Schemes](#colour-schemes)
-  * [Typography](#typography)
-  * [Imagery](#imagery)
-- [Features](#features)
-  * [Existing Features](#existing-features)
-  * [Features left to implement](#features-left-to-implement)
-- [Existing Bugs](#existing-bugs)
-- [Fixed bugs.](#fixed-bugs)
-- [Testing](#testing)
-  * [Wave Test](#wave-test)
-  * [Jigsaw test](#jigsaw-test)
-  * [Lighthouse Tests](#lighthouse-tests)
-  * [Nu Html Checker](#nu-html-checker)
-- [References and Acknowledgments](#references-and-acknowledgments)
-- [Technologies Used](#technologies-used)
-- [Deployment](#deployment)
-- [Personal Devlopment](#personal-devlopment)
+
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -252,15 +233,20 @@ I would like to acknowledge my mentor Daisy McGirr, Lead Dave Horrocks and the p
 
 - My website was deployed to GitHub Pages 
 - First go to the GitHub repository and select settings
-![GitHub Settings](assets/images/github-settings.png).
+![GitHub Settings](assets/images/github-settings-hangman.png).
 - Then scroll down to the GitHub pages section and click the link.
 ![GitHub Pages](assets/images/github-pages.png)
 - Then click on the dropdown box below source and pick Branch Main and, indicated in the red circle and click save.
 - You will then be deployed, your web address will show in the green banner, in the blue circle.
-![GitHub Pages 2](assets/images/github-pages2.png).
+![GitHub Pages 2](assets/images/github-webaddress.png).
 - It can take a couple of minutes for your website to deploy.
 
 
 
 # Personal Devlopment
 
+I have learnt a lot over the last couple of weeks.  I have worked hard on this project but unfortunately everything in Javascript seemed to take 3 times longer to achieve than I thought it would, and so there are a lot of items in the website I simply did not have time to implement.
+
+However I have made a working game and I am pretty proud of what I have achieved especially since I had no clue where to even start 2 weeks ago.
+
+I think my git commit messages are better in this project than my last, but still need further work.
