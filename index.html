@@ -59,8 +59,9 @@
     <!--Form to input the letter guess-->
         <form id="form">
             <label for="letter-guess" class="guess">Enter Letter:</label>
-            <input name="letterInput" id="letter-guess" type="text" maxlength="1" minlength="1" onkeyup="this.value = this.value.toLowerCase();">
+            <input name="letterInput" id="letter-guess" type="text" maxlength="1" minlength="1" onkeyup="this.value = this.value.toLowerCase()" required pattern="[a-zA-Z]">
             <input type="submit" class="submit-button" value="Submit Answer">
+            <p>Please input letters only</p>
         </form>
     <!--Area for used game letters-->    
         <div id="used-letters-box"></div>

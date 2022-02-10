@@ -146,11 +146,18 @@ There are a number of other features I would like to implement moving forward.
 - I would like to make the winning and loosing screens more intersting with images of the aforementioned happy or sand hangman.
 - I would like to add difficulty levels to give an added dimension to the game in terms of dificulty.
 - I would like to add an overall score of games won and lost.
+- I would add x buttons to rules and subject the pop up screens so it is obvious where to close them.  This will be better ux.
 
 #  Bugs
  I noticed that it was possible to input a blank space on the game and it would give give a false value and loose a life.  I tried to fix it by putting a min length of 1 onthe input box but this didn't work.  This is currently still an existing bug.  It does make the user loose a life which is bad ux but it only does it once.
 
- The hidden word currently accpets capital and lower case letters as different guesses. it also does not accept the furst letter of each word as correct unless it is a capital.  I fixed part of this problem but adding the code below.  This ensures only lower case letters are entered into the hidden word.
+It is possible to input numbers which will make you loose a life because there are no words with numbers in them.  I have fixed this bug by writing the code 
+```required pattern="[a-zA-Z]"
+```
+in the input box in the html.  If you input a number now it askes you to please input the requested format.
+I have put a <p> under the input box saying to enter letters only, just to make sure it is clear.
+
+ The hidden word accpets capital and lower case letters as different gueses. it also does not accept the furst letter of each word as correct unless it is a capital.  I fixed part of this problem but adding the code below.  This ensures only lower case letters are entered into the hidden word.
 
  ```for (let i = 0; i < randomWord.length; i++) {
 let currentWord = randomWord.toLowerCase();
@@ -162,7 +169,7 @@ however this did not fix the problem as the initial letter was still only lettin
 let randomWord = theArray[Math.floor(Math.random() * theArray.length)].toLowerCase();
 document.getElementById('word').innerHTML = "";
 ```
-There is a bug with the hidden letters.  You can hightlight the word to cheat.  I have fixed this by adding a font size of 0 so the letters cant be seen and padding so that the bottom border can be seen.
+There is a bug with the hidden letters.  You can hightlight the word to cheat.  I have fixed this by adding a font size of 0 so the letters cant be seen and padding so that the bottom border can be seen.  This means however that if the user really wanted to they could cheat by looking in dev tools.
 
 ---
 
@@ -170,34 +177,65 @@ There is a bug with the hidden letters.  You can hightlight the word to cheat.  
 
 ## JSHint Test
 
+I tested my Javascript with at (www.jsint.com)  There were no errors as you can see below.
+![jshint](assets/images/jshint-test.png)
+
 ## Wave Test
 
-
-
+I tested with (https://wave.webaim.org/report#/https://0osaraho0.github.io/Hangman/)
+![wave](assets/images/wave-test.png)
 
 ---
 
 ## Jigsaw test
-
-
+I tested with Jigsaw CSS checker 
+![Jigsaw](assets/images/jigsaw-css-check.png)
 
 ---
 
 ## Lighthouse Tests
-
+I performed the lighthouse test
+![Lighthouse](assets/images/lighthouse-test.png)
 
 
 ---
 
 ##  Nu Html Checker
+I checked with (https://validator.w3.org/nu/)
 
-
-
+![html check](assets/images/w3html-check.png)
 ---
 
+I have also checked the workings of the game.  When you first load the game the subject screen appears.  If you click any of the 3 subjects they will take you to the game with words relating to the given subject.  When you click them they also close the subject box.
+
+There is a rules button that when clicked opens the rules page.  If you click it again it closes it again.
+
+The form input button only allows a letter to be put in once for each game.  It also accpets capital or lowercase letters but only submits it them as lowercase letters.  The form does not accept numbers.
+
+The form submit button submits the letter and it goes into the word if it is correct or part of the hangman is drawn if it is inocorrect.  The letter also appears in the used letters box.
+
+when the game is won a page pops up saying congratulations.  It has a restart button which refreshes the page and starts again.#
+The same thing happes with the lose page when the player loses.  The restart button works on this page too.
+
 # References and Acknowledgments
+Websites used for reference
 
+https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
+https://css-tricks.com/snippets/javascript/select-random-item-array/
+https://www.w3schools.com/jsref/met_document_queryselectorAll.asp
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
+https://www.w3schools.com/jsref/prop_style_display.asp
+https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
+https://www.w3schools.com/jsref/jsref_push.asp
+https://www.w3schools.com/jsref/prop_element_classlist.asp
+https://www.w3schools.com/css/css_align.asp
+https://stackoverflow.com/questions/19619428/html5-form-validation-pattern-alphanumeric-with-spaces
 
+I looked at one hangman walkthrough and another students project but I did not use the code directly from either of them
+https://github.com/shellieD/Blast-Off/
+https://github.com/ironhack-labs/lab-javascript-hangman
+
+I would like to acknowledge my mentor Daisy McGirr, Lead Dave Horrocks and the pp2 slack community for their help and guidence.
 
 # Technologies Used
 

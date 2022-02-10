@@ -359,16 +359,43 @@ body {
 .hide {
     display: none;
 }
+
+/* styling for media screens 925px or less*/
+@media screen and (max-width: 925px) {
+
+    #used-letters-box {
+        margin-left: 409px;
+    }
+}
+
+
+/* styling for media screens 766px or less*/
+@media screen and (max-width: 766px) {
+
+    #used-letters-box {
+        margin-left: 279px;
+        margin-right: 0;
+    }
+}
+
 /* styling for media screens 620px or less*/
 @media screen and (max-width: 620px) {
     .hidden-word {
         margin: 0px 9px;
     }
+
 /*620px screen*/
     #word {
         font-size: 25px;
     }
+    #used-letters-box {
+        font-size: 24px;
+        margin-left: 255px;
+        letter-spacing: 34px;
+        max-width: 245;
+    }
 }
+
 
 /*styling for screens 450px or less*/
 @media screen and (max-width: 450px) {
@@ -398,8 +425,10 @@ body {
         font-size: 20px;
         letter-spacing: 19px;
         float: left;
-        position: relative;
+        position: absolute;
         overflow-wrap: anywhere;
+        max-width: 200px;
+        margin-left: 0;
 
     }
 }
